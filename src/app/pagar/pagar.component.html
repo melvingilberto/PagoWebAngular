@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <h1 class="text-center">Pago Web - Angular</h1>
+  
+    <div class="row" *ngIf="!showForm">
+      <div class="col-md-2">
+        <div class="form-group">
+          <label>Importe</label>
+          <input type="number" class="form-control" [(ngModel)]="amount">
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <br>
+          <input type="button" value="Pagar" class="btn btn-primary" (click)="pagar()">
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isLoading">
+      <div class="col-md-12">
+        <p><b>Cargando, espere un momento ...</b></p>
+      </div>
+    </div>
+  
+    <div class="row" *ngIf="showForm">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Token</label>
+          <textarea class="form-control" rows="7" [ngModel]="token" disabled></textarea>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Session Key</label>
+          <input type="text" class="form-control" [ngModel]="sessionKey" disabled>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Importe</label>
+          <input type="text" class="form-control" [ngModel]="amount" disabled>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Channel</label>
+          <input type="text" class="form-control" [ngModel]="channel" disabled>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Número de pedido</label>
+          <input type="text" class="form-control" [ngModel]="purchaseNumber" disabled>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-12" id="btnPago">
+    </div>
+  </div>

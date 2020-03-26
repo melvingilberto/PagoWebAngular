@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Transaction Token</label>
+                <input type="text" class="form-control" [ngModel]="transactionId" disabled>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Número de pedido</label>
+                <input type="text" class="form-control" [ngModel]="purchaseNumber" disabled>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Importe</label>
+                <input type="text" class="form-control" [ngModel]="amount" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="isLoading">
+        <div class="col-md-12">
+            <p><b>Cargando, espere un momento ...</b></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <pre>{{jsonAutorizacion | json}}</pre>
+        </div>
+
+        <br>
+
+        <div class="col-md-12" *ngIf="!isLoading">
+            <a routerLink="/">Volver</a>
+        </div>
+
+        <br>
+    </div>
+</div>

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  merchantId: "522591303",
+  currency: "PEN",
+  channel: "web",
+  user: "integraciones.visanet@necomplus.com",
+  pwd: "d5e7nk$M",
+  endPointSecurity: "https://apitestenv.vnforapps.com/api.security/v1/security",
+  endPointSession: "https://apitestenv.vnforapps.com/api.ecommerce/v2/ecommerce/token/session/",
+  endPointJS: "https://static-content-qas.vnforapps.com/v2/js/checkout.js?qa=true",
+  endPointAuthorization: "https://apitestenv.vnforapps.com/api.authorization/v3/authorization/ecommerce/"
 };
 
 /*
